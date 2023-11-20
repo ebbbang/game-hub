@@ -10,10 +10,10 @@ interface Props {
 }
 
 function GameGrid({ gameQuery }: Props) {
-  const { data: games, error, isLoading } = useGames(gameQuery);
+  const { data: games, isLoading, error } = useGames(gameQuery);
   const skeletons = [...Array(15).keys()];
 
-  if (error) return <Text>{error}</Text>;
+  if (error) return <Text>{error.message}</Text>;
 
   return (
     <Box padding={3}>
@@ -24,7 +24,7 @@ function GameGrid({ gameQuery }: Props) {
               <GameCardSkeleton></GameCardSkeleton>
             </GameCardContainer>
           ))}
-        {games.map((game) => (
+        {games?.results.map((game) => (
           <GameCardContainer key={game.id}>
             <GameCard game={game} />
           </GameCardContainer>

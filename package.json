@@ -15,6 +15,8 @@
     "@emotion/styled": "^11.11.0",
     "@react-buddy/ide-toolbox": "^2.4.0",
     "@react-buddy/palette-chakra-ui": "^2.3.1",
+    "@tanstack/react-query": "^5.8.4",
+    "@tanstack/react-query-devtools": "^5.8.4",
     "axios": "^1.5.1",
     "framer-motion": "^10.16.4",
     "prettier": "^3.0.3",
